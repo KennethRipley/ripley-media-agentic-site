@@ -1,1 +1,0 @@
-<div class="substack-post-embed"><p lang="en">AdCP vs the Stack: Are We Innovating… or Protecting the Pipes? by Ken Ripley</p><p>and what wil IAB do about it?</p><a data-post-link href="https://ripleymedia.substack.com/p/adcp-vs-the-stack-are-we-innovating">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
