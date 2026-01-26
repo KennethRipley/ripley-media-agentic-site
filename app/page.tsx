@@ -235,16 +235,12 @@ export default function Home() {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/kennethripley/"
                 className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
               >
-                Add Calendly link
+                Connect on LinkedIn
               </a>
             </div>
-
-            <p className="mt-4 text-xs text-zinc-500">
-              Replace the Calendly button link when ready.
-            </p>
           </div>
         </div>
       </section>
