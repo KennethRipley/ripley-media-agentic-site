@@ -12,7 +12,7 @@ export default function Home() {
             <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
               Writing
             </a>
-            <a href="#thesis" className="text-sm text-zinc-700 hover:text-zinc-900">
+            <a href="/thesis" className="text-sm text-zinc-700 hover:text-zinc-900">
               Thesis
             </a>
             <a href="#services" className="text-sm text-zinc-700 hover:text-zinc-900">
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Thesis */}
+      {/* Thesis (on-page section kept for scanning, but nav link goes to /thesis) */}
       <section id="thesis" className="bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-2xl font-semibold tracking-tight">
@@ -135,6 +135,15 @@ export default function Home() {
               </span>{" "}
               I show you what to clean up, what to standardize, and the smallest pilot that proves value.
             </p>
+          </div>
+
+          <div className="mt-8">
+            <a
+              href="/thesis"
+              className="inline-flex rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+            >
+              Read the full thesis →
+            </a>
           </div>
         </div>
       </section>
@@ -218,7 +227,10 @@ export default function Home() {
                 body: "A 30–60 day pilot with success metrics (time-to-launch, repeat spend, yield, measurement clarity)."
               }
             ].map((item) => (
-              <div key={item.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <div
+                key={item.title}
+                className="rounded-2xl border border-zinc-200 bg-white p-6"
+              >
                 <h3 className="text-sm font-semibold">{item.title}</h3>
                 <p className="mt-3 text-sm text-zinc-700">{item.body}</p>
               </div>
@@ -264,8 +276,10 @@ export default function Home() {
             </div>
 
             <p className="mt-4 text-xs text-zinc-500">
-              Tip: Add a PDF named <span className="font-medium">RMA-Executive-Brief.pdf</span> to your{" "}
-              <span className="font-medium">/public</span> folder to enable the download button.
+              Executive brief:{" "}
+              <a href={executiveBriefHref} className="underline hover:text-zinc-800">
+                {executiveBriefHref}
+              </a>
             </p>
           </div>
         </div>
