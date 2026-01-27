@@ -1,5 +1,13 @@
 const embedHtml = `
-<div class="substack-post-embed"><p lang="en">AdCP vs the Stack: Are We Innovating… or Protecting the Pipes? by Ken Ripley</p><p>and what wil IAB do about it?</p><a data-post-link href="https://ripleymedia.substack.com/p/adcp-vs-the-stack-are-we-innovating">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+<div class="substack-post-embed">
+  <p lang="en">
+    AdCP vs the Stack: Are We Innovating… or Protecting the Pipes? by Ken Ripley
+  </p>
+  <p>and what wil IAB do about it?</p>
+  <a data-post-link href="https://ripleymedia.substack.com/p/adcp-vs-the-stack-are-we-innovating">
+    Read on Substack
+  </a>
+</div>
 `;
 
 export default function WritingPage() {
@@ -24,6 +32,13 @@ export default function WritingPage() {
           View all posts on Substack →
         </a>
       </div>
+
+      {/* Loads Substack embed script for the embedded post */}
+      <script
+        async
+        src="https://substack.com/embedjs/embed.js"
+        charSet="utf-8"
+      />
     </main>
   );
 }
