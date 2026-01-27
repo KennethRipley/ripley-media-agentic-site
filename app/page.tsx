@@ -103,7 +103,7 @@ export default function Home() {
             <div className="rounded-xl border border-zinc-200 p-5">
               <p className="text-sm font-semibold">Execution</p>
               <p className="mt-2 text-sm text-zinc-700">
-                A focused 30-day sprint to become agent-ready without eating the roadmap.
+                A 30-day plan to become agentic-ready without eating the roadmap.
               </p>
             </div>
           </div>
@@ -114,11 +114,11 @@ export default function Home() {
       <section id="thesis" className="bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-2xl font-semibold tracking-tight">
-            The CTV problem isn&apos;t AI. It&apos;s workflow friction.
+            The CTV problem isn't AI. It's workflow friction.
           </h2>
 
           <p className="mt-4 max-w-4xl text-zinc-700">
-            Agentic buying will route spend toward inventory that&apos;s clean, machine-readable, and easy
+            Agentic buying will route spend toward inventory that's clean, machine-readable, and easy
             to transact. The winners reduce manual steps in packaging, activation, and measurement
             without massive rewrites.
           </p>
@@ -180,7 +180,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold tracking-tight">How I help</h2>
 
           <p className="mt-3 max-w-3xl text-zinc-700">
-            A practical operator&apos;s approach: inventory + packaging readiness, partner workflows, and a
+            A practical operator's approach: inventory + packaging readiness, partner workflows, and a
             pilot path that drives revenue outcomes.
           </p>
 
@@ -238,7 +238,7 @@ export default function Home() {
             {[
               {
                 title: "Agentic Readiness Scorecard",
-                body: "A clear view of what’s clean, what’s messy, and what to fix first — tied to revenue impact."
+                body: "A clear view of what's clean, what's messy, and what to fix first — tied to revenue impact."
               },
               {
                 title: "Packaging Spec + Gold Standards",
@@ -278,8 +278,8 @@ export default function Home() {
             <h2 className="text-2xl font-semibold tracking-tight">Want to move faster?</h2>
 
             <p className="mt-3 max-w-3xl text-zinc-700">
-              If you want agentic workflows that translate into real revenue, let&apos;s do a short call and
-              decide if there&apos;s a fit.
+              If you want agentic workflows that translate into real revenue, let's do a short call and
+              decide if there's a fit.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
