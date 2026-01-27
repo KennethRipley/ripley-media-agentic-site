@@ -9,9 +9,7 @@ export default function Home() {
   const [compact, setCompact] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setCompact(window.scrollY > 60);
-    };
+    const onScroll = () => setCompact(window.scrollY > 60);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -19,11 +17,12 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      {/* Sticky Masthead: big at top, shrinks on scroll */}
+      {/* Sticky Masthead: big at top, shrinks to 20% on scroll */}
       <header
         className={[
           "sticky top-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur",
           "transition-all duration-300",
+          compact ? "shadow-sm" : "shadow-none",
         ].join(" ")}
       >
         <div className="mx-auto max-w-6xl px-6">
@@ -31,7 +30,7 @@ export default function Home() {
           <div
             className={[
               "flex justify-center transition-all duration-300",
-              compact ? "py-3" : "py-6 sm:py-8",
+              compact ? "py-2" : "py-6 sm:py-8",
             ].join(" ")}
           >
             <a href="/" className="block">
@@ -39,10 +38,12 @@ export default function Home() {
                 src={logoSrc}
                 alt="Ripley Media Agentic"
                 className={[
-                  "mx-auto h-auto transition-all duration-300",
-                  compact
-                    ? "w-[220px] sm:w-[260px] md:w-[300px]"
-                    : "w-[70%] max-w-[520px] sm:w-[60%] sm:max-w-[640px] md:w-[55%] md:max-w-[720px]",
+                  "mx-auto h-auto",
+                  "transition-transform duration-300 ease-out",
+                  // ORIGINAL SIZE (big masthead)
+                  "w-[70%] max-w-[520px] sm:w-[60%] sm:max-w-[640px] md:w-[55%] md:max-w-[720px]",
+                  // SHRINK TO 20% ON SCROLL
+                  compact ? "scale-[0.2] origin-center" : "scale-100 origin-center",
                 ].join(" ")}
               />
             </a>
@@ -288,20 +289,20 @@ export default function Home() {
             {[
               {
                 title: "Agentic Readiness Scorecard",
-                body: "A clear view of what's clean, what's messy, and what to fix first — tied to revenue impact."
+                body: "A clear view of what's clean, what's messy, and what to fix first — tied to revenue impact.",
               },
               {
                 title: "Packaging Spec + Gold Standards",
-                body: "A simple packaging framework and examples that make offers machine-readable and executable."
+                body: "A simple packaging framework and examples that make offers machine-readable and executable.",
               },
               {
                 title: "Workflow Map + Friction Kill List",
-                body: "Where activation breaks today, how much it costs, and the fastest path to reduce it."
+                body: "Where activation breaks today, how much it costs, and the fastest path to reduce it.",
               },
               {
                 title: "Pilot Plan + KPI Dashboard",
-                body: "A 30–60 day pilot with success metrics (time-to-launch, repeat spend, yield, measurement clarity)."
-              }
+                body: "A 30–60 day pilot with success metrics (time-to-launch, repeat spend, yield, measurement clarity).",
+              },
             ].map((item) => (
               <div key={item.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
                 <h3 className="text-sm font-semibold">{item.title}</h3>
