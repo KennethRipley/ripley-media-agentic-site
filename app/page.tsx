@@ -6,7 +6,15 @@ export default function Home() {
       {/* Header */}
       <header className="border-b border-zinc-200">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="font-semibold tracking-tight">Ripley Media Agentic</div>
+          {/* Logo + Name */}
+          <a href="/" className="flex items-center gap-3">
+            <img
+              src="/rma-logo.svg"
+              alt="Ripley Media Agentic"
+              className="h-7 w-auto"
+            />
+            <span className="font-semibold tracking-tight">Ripley Media Agentic</span>
+          </a>
 
           <nav className="flex items-center gap-3">
             <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
@@ -70,6 +78,8 @@ export default function Home() {
             <a
               href={executiveBriefHref}
               className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download executive brief (PDF)
             </a>
@@ -110,7 +120,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Thesis (shortened on-page; full story lives at /thesis) */}
+      {/* Thesis */}
       <section id="thesis" className="bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-2xl font-semibold tracking-tight">
@@ -167,6 +177,8 @@ export default function Home() {
             <a
               href={executiveBriefHref}
               className="inline-flex rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download executive brief (PDF)
             </a>
@@ -264,6 +276,8 @@ export default function Home() {
             <a
               href={executiveBriefHref}
               className="inline-flex rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download executive brief (PDF)
             </a>
