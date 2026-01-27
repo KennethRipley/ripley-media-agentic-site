@@ -298,10 +298,7 @@ export default function Home() {
           <div className="rounded-2xl border border-zinc-200 p-8">
             <h2 className="text-2xl font-semibold tracking-tight">Want to move faster?</h2>
 
-            <p className="mt-3 max-w-3xl text-zinc-700">
-              If you want agentic workflows that translate into real revenue, let’s do a short call and decide if there’s
-              a fit.
-            </p>
+            
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
