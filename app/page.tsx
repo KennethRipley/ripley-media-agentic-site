@@ -1,19 +1,27 @@
 export default function Home() {
-  const executiveBriefHref = "/RMA-Executive-Brief.pdf"; // Put the PDF in /public with this exact filename
-  const logoSrc = "/rma-agentic-white.png"; // Put this PNG in /public
+  const executiveBriefHref = "/RMA-Executive-Brief.pdf";
+  const logoSrc = "/rma-agentic-white.png";
 
   return (
     <main className="min-h-screen bg-white text-zinc-900">
       {/* Header */}
-      <header className="border-b border-zinc-200">
+      <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          {/* Logo + Name */}
-          <a href="/" className="flex items-center gap-3">
-            <img src={logoSrc} alt="Ripley Media Agentic" className="h-8 w-auto" />
-            <span className="font-semibold tracking-tight">Ripley Media Agentic</span>
+          {/* Brand (logo only + optional small wordmark) */}
+          <a href="/" className="flex items-center gap-4">
+            <img
+              src={logoSrc}
+              alt="Ripley Media Agentic"
+              className="h-12 w-auto sm:h-14"
+            />
+            {/* If your PNG already includes the words, keep this hidden.
+                If you want text next to the logo, change hidden -> block */}
+            <span className="hidden text-base font-semibold tracking-tight sm:text-lg">
+              Ripley Media Agentic
+            </span>
           </a>
 
-          <nav className="flex items-center gap-3">
+          <nav className="flex items-center gap-4">
             <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
               Writing
             </a>
