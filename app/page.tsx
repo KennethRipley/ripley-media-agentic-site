@@ -4,15 +4,13 @@ export default function Home() {
       {/* Header */}
       <header className="border-b border-zinc-200">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="font-semibold tracking-tight">
-            Ripley Media Agentic
-          </div>
+          <div className="font-semibold tracking-tight">Ripley Media Agentic</div>
 
           <nav className="flex items-center gap-3">
-            <a
-              href="#services"
-              className="text-sm text-zinc-700 hover:text-zinc-900"
-            >
+            <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
+              Writing
+            </a>
+            <a href="#services" className="text-sm text-zinc-700 hover:text-zinc-900">
               Services
             </a>
             <a
@@ -100,8 +98,8 @@ export default function Home() {
             <div className="rounded-2xl border border-zinc-200 bg-white p-6">
               <h3 className="text-sm font-semibold">Agentic Strategy</h3>
               <p className="mt-3 text-sm text-zinc-700">
-                Use-case mapping, operating model, and where agents actually
-                drive outcomes (not demos).
+                Use-case mapping, operating model, and where agents actually drive
+                outcomes (not demos).
               </p>
               <ul className="mt-4 space-y-2 text-sm text-zinc-700">
                 <li>• Buyer / seller agent workflows</li>
@@ -113,8 +111,8 @@ export default function Home() {
             <div className="rounded-2xl border border-zinc-200 bg-white p-6">
               <h3 className="text-sm font-semibold">Partnership Design</h3>
               <p className="mt-3 text-sm text-zinc-700">
-                Packaging + operating terms for DSPs, SSPs, OEMs, broadcasters,
-                and data partners.
+                Packaging + operating terms for DSPs, SSPs, OEMs, broadcasters, and
+                data partners.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-zinc-700">
                 <li>• Incremental demand strategy</li>
@@ -144,8 +142,8 @@ export default function Home() {
           <h2 className="text-2xl font-semibold tracking-tight">What you get</h2>
 
           <p className="mt-3 max-w-3xl text-zinc-700">
-            Concrete outputs you can use internally, take to partners, and
-            measure against revenue.
+            Concrete outputs you can use internally, take to partners, and measure
+            against revenue.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -182,9 +180,7 @@ export default function Home() {
       {/* Proof */}
       <section className="bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <h2 className="text-2xl font-semibold tracking-tight">
-            Why this works
-          </h2>
+          <h2 className="text-2xl font-semibold tracking-tight">Why this works</h2>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             <div className="rounded-2xl border border-zinc-200 bg-white p-6">
@@ -228,7 +224,7 @@ export default function Home() {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="mailto:ripleymediallc@gmail.com"
+                href="mailto:kenneth@ripley.media"
                 className="rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
               >
                 Email me
