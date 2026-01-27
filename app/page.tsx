@@ -68,6 +68,15 @@ export default function Home() {
             </a>
           </div>
 
+          {/* Proof strip */}
+          <div className="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+            <p className="text-sm font-semibold">Proof, not theory</p>
+            <p className="mt-2 text-sm text-zinc-700">
+              Operator-led GTM + partnerships in advanced TV/CTV and programmatic. Practical packaging,
+              workflows, and a pilot path tied to revenue outcomes.
+            </p>
+          </div>
+
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl border border-zinc-200 p-5">
               <p className="text-sm font-semibold">Clarity</p>
@@ -91,7 +100,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Thesis (on-page section kept for scanning, but nav link goes to /thesis) */}
+      {/* Thesis (shortened on-page; full story lives at /thesis) */}
       <section id="thesis" className="bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-2xl font-semibold tracking-tight">
@@ -99,30 +108,30 @@ export default function Home() {
           </h2>
 
           <p className="mt-4 max-w-4xl text-zinc-700">
-            Too much CTV revenue is trapped in manual steps: packaging, deal setup, creative QA,
-            measurement mapping, and troubleshooting. As “agentic buying” emerges, spend will route to
-            platforms that make execution feel like checkout — simple, auditable, repeatable.
+            Agentic buying will route spend toward inventory that’s clean, machine-readable, and easy
+            to transact. The winners reduce manual steps in packaging, activation, and measurement —
+            without massive rewrites.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             <div className="rounded-2xl border border-zinc-200 bg-white p-6">
-              <p className="text-sm font-semibold">Make inventory agent-ready</p>
+              <p className="text-sm font-semibold">Inventory readiness</p>
               <p className="mt-3 text-sm text-zinc-700">
-                Clean offers, clear rules, consistent metadata — so agents can discover and transact.
+                Make offers discoverable and executable with clear rules + consistent metadata.
               </p>
             </div>
 
             <div className="rounded-2xl border border-zinc-200 bg-white p-6">
-              <p className="text-sm font-semibold">Reduce the activation tax</p>
+              <p className="text-sm font-semibold">Friction reduction</p>
               <p className="mt-3 text-sm text-zinc-700">
-                Fewer human steps, fewer tickets, faster launch — without major platform rewrites.
+                Reduce tickets, handoffs, and rework to shorten time-to-spend.
               </p>
             </div>
 
             <div className="rounded-2xl border border-zinc-200 bg-white p-6">
-              <p className="text-sm font-semibold">Drive measurable outcomes</p>
+              <p className="text-sm font-semibold">Measurable outcomes</p>
               <p className="mt-3 text-sm text-zinc-700">
-                Shorter time-to-spend, higher repeat spend, better yield, clearer measurement.
+                Build a pilot tied to repeat spend, yield, and measurement clarity.
               </p>
             </div>
           </div>
@@ -131,18 +140,24 @@ export default function Home() {
             <p className="text-sm font-semibold">The promise</p>
             <p className="mt-3 text-sm text-zinc-700">
               <span className="font-semibold">
-                In ~30 days, you’re agentic-ready — without consuming your roadmap.
+                In 30 days, your inventory is agent-ready — without consuming your product roadmap.
               </span>{" "}
               I show you what to clean up, what to standardize, and the smallest pilot that proves value.
             </p>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="/thesis"
               className="inline-flex rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
             >
               Read the full thesis →
+            </a>
+            <a
+              href={executiveBriefHref}
+              className="inline-flex rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
+            >
+              Download executive brief (PDF)
             </a>
           </div>
         </div>
@@ -227,10 +242,7 @@ export default function Home() {
                 body: "A 30–60 day pilot with success metrics (time-to-launch, repeat spend, yield, measurement clarity)."
               }
             ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-zinc-200 bg-white p-6"
-              >
+              <div key={item.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
                 <h3 className="text-sm font-semibold">{item.title}</h3>
                 <p className="mt-3 text-sm text-zinc-700">{item.body}</p>
               </div>
