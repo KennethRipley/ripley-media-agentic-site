@@ -39,12 +39,12 @@ export default function Home() {
           </p>
 
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Agentic AI + Programmatic CTV growth — built for real revenue.
+            Make your CTV inventory agent-ready in 30 days.
           </h1>
 
           <p className="mt-5 text-lg leading-relaxed text-zinc-700">
-            I help sellers, platforms, and partners turn agentic workflows into measurable outcomes:
-            demand growth, cleaner packaging, and faster execution.
+            Packaging + workflow cleanup that reduces the activation tax and unlocks incremental
+            demand — without consuming your product roadmap.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -72,8 +72,9 @@ export default function Home() {
           <div className="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
             <p className="text-sm font-semibold">Proof, not theory</p>
             <p className="mt-2 text-sm text-zinc-700">
-              Operator-led GTM + partnerships in advanced TV/CTV and programmatic. Practical packaging,
-              workflows, and a pilot path tied to revenue outcomes.
+              Operator-led GTM + partnerships across CTV/programmatic (seller + platform + partner).
+              I specialize in inventory packaging readiness and workflow friction removal — so you’re
+              agent-ready in 30 days without consuming the roadmap.
             </p>
           </div>
 
@@ -142,7 +143,8 @@ export default function Home() {
               <span className="font-semibold">
                 In 30 days, your inventory is agent-ready — without consuming your product roadmap.
               </span>{" "}
-              I show you what to clean up, what to standardize, and the smallest pilot that proves value.
+              I show you what to clean up, what to standardize, and the smallest pilot that proves
+              value.
             </p>
           </div>
 
@@ -204,105 +206,4 @@ export default function Home() {
               <p className="mt-3 text-sm text-zinc-700">
                 Narrative, sales tools, and weekly execution that moves dollars.
               </p>
-              <ul className="mt-4 space-y-2 text-sm text-zinc-700">
-                <li>• Positioning + talk tracks</li>
-                <li>• One-pagers + exec decks</li>
-                <li>• Sales playbooks + weekly cadence</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Deliverables */}
-      <section id="deliverables" className="bg-zinc-50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <h2 className="text-2xl font-semibold tracking-tight">What you get</h2>
-
-          <p className="mt-3 max-w-3xl text-zinc-700">
-            Concrete outputs you can use internally, take to partners, and measure against revenue.
-          </p>
-
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {[
-              {
-                title: "Agentic Readiness Scorecard",
-                body: "A clear view of what’s clean, what’s messy, and what to fix first — tied to revenue impact."
-              },
-              {
-                title: "Packaging Spec + Gold Standards",
-                body: "A simple packaging framework and examples that make offers machine-readable and executable."
-              },
-              {
-                title: "Workflow Map + Friction Kill List",
-                body: "Where activation breaks today, how much it costs, and the fastest path to reduce it."
-              },
-              {
-                title: "Pilot Plan + KPI Dashboard",
-                body: "A 30–60 day pilot with success metrics (time-to-launch, repeat spend, yield, measurement clarity)."
-              }
-            ].map((item) => (
-              <div key={item.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
-                <h3 className="text-sm font-semibold">{item.title}</h3>
-                <p className="mt-3 text-sm text-zinc-700">{item.body}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10">
-            <a
-              href={executiveBriefHref}
-              className="inline-flex rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
-            >
-              Download executive brief (PDF)
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="rounded-2xl border border-zinc-200 p-8">
-            <h2 className="text-2xl font-semibold tracking-tight">Want to move faster?</h2>
-
-            <p className="mt-3 max-w-3xl text-zinc-700">
-              If you want agentic workflows that translate into real revenue, let’s do a short call and
-              decide if there’s a fit.
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href="mailto:kenneth@ripley.media"
-                className="rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
-              >
-                Email me
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/kennethripley/"
-                className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
-              >
-                Connect on LinkedIn
-              </a>
-            </div>
-
-            <p className="mt-4 text-xs text-zinc-500">
-              Executive brief:{" "}
-              <a href={executiveBriefHref} className="underline hover:text-zinc-800">
-                {executiveBriefHref}
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="border-t border-zinc-200">
-        <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-zinc-600">
-          © {new Date().getFullYear()} Ripley Media Agentic. All rights reserved.
-        </div>
-      </footer>
-    </main>
-  );
-}
+              <ul className="mt-4 space-y-2 text-sm text-z
