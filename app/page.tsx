@@ -1,33 +1,60 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function Home() {
   const executiveBriefHref = "/RMA-Executive-Brief.pdf";
   const logoSrc = "/rma-agentic-white.png";
 
+  const [compact, setCompact] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setCompact(window.scrollY > 60);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      {/* Masthead: big centered logo + centered nav */}
-      <header className="border-b border-zinc-200 bg-white">
+      {/* Sticky Masthead: big at top, shrinks on scroll */}
+      <header
+        className={[
+          "sticky top-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur",
+          "transition-all duration-300",
+        ].join(" ")}
+      >
         <div className="mx-auto max-w-6xl px-6">
           {/* Big centered logo block */}
-          <div className="flex justify-center py-6 sm:py-8">
+          <div
+            className={[
+              "flex justify-center transition-all duration-300",
+              compact ? "py-3" : "py-6 sm:py-8",
+            ].join(" ")}
+          >
             <a href="/" className="block">
               <img
                 src={logoSrc}
                 alt="Ripley Media Agentic"
-                className="
-                  mx-auto h-auto
-                  w-[70%]
-                  max-w-[520px]
-                  sm:w-[60%]
-                  sm:max-w-[640px]
-                  md:w-[55%]
-                  md:max-w-[720px]
-                "
+                className={[
+                  "mx-auto h-auto transition-all duration-300",
+                  compact
+                    ? "w-[220px] sm:w-[260px] md:w-[300px]"
+                    : "w-[70%] max-w-[520px] sm:w-[60%] sm:max-w-[640px] md:w-[55%] md:max-w-[720px]",
+                ].join(" ")}
               />
             </a>
           </div>
 
           {/* Centered nav */}
-          <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pb-5">
+          <nav
+            className={[
+              "flex flex-wrap items-center justify-center transition-all duration-300",
+              compact ? "gap-x-5 gap-y-2 pb-3" : "gap-x-6 gap-y-2 pb-5",
+            ].join(" ")}
+          >
             <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
               Writing
             </a>
