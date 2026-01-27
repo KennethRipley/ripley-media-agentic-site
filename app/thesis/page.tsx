@@ -3,6 +3,33 @@ export default function ThesisPage() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-16 text-zinc-900">
+      {/* Top nav / header */}
+      <div className="mb-10 flex items-center justify-between border-b border-zinc-200 pb-4">
+        <a href="/" className="font-semibold tracking-tight hover:opacity-80">
+          Ripley Media Agentic
+        </a>
+
+        <nav className="flex items-center gap-4">
+          <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
+            Writing
+          </a>
+
+          <a
+            href={executiveBriefHref}
+            className="text-sm text-zinc-700 hover:text-zinc-900"
+          >
+            Executive Brief (PDF)
+          </a>
+
+          <a
+            href="mailto:kenneth@ripley.media"
+            className="rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+
       <header className="flex flex-col gap-2">
         <p className="inline-flex w-fit rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-700">
           Thesis • Agentic AI • Programmatic CTV
@@ -67,7 +94,7 @@ export default function ThesisPage() {
         <h2 className="text-xl font-semibold tracking-tight">The promise</h2>
         <p className="mt-3 max-w-4xl text-zinc-700">
           <span className="font-semibold">
-            In ~30 days, you’re agentic-ready — without consuming your roadmap.
+            In 30 days, your inventory is agent-ready — without consuming your product roadmap.
           </span>{" "}
           I show you what to clean up, what to standardize, and the smallest pilot that proves value.
         </p>
@@ -89,6 +116,36 @@ export default function ThesisPage() {
             <p className="text-sm font-semibold">Week 4</p>
             <p className="mt-2 text-sm text-zinc-700">Pilot plan + KPI dashboard</p>
           </div>
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-xl font-semibold tracking-tight">What I deliver</h2>
+
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          {[
+            {
+              title: "Agentic Readiness Scorecard",
+              body: "A clear view of what’s clean, what’s messy, and what to fix first — tied to revenue impact."
+            },
+            {
+              title: "Packaging Spec + Gold Standards",
+              body: "A simple packaging framework and examples that make offers machine-readable and executable."
+            },
+            {
+              title: "Workflow Map + Friction Kill List",
+              body: "Where activation breaks today, how much it costs, and the fastest path to reduce it."
+            },
+            {
+              title: "Pilot Plan + KPI Dashboard",
+              body: "A 30–60 day pilot with success metrics (time-to-launch, repeat spend, yield, measurement clarity)."
+            }
+          ].map((item) => (
+            <div key={item.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <h3 className="text-sm font-semibold">{item.title}</h3>
+              <p className="mt-3 text-sm text-zinc-700">{item.body}</p>
+            </div>
+          ))}
         </div>
       </section>
 
