@@ -4,24 +4,30 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          {/* Brand (logo only + optional small wordmark) */}
-          <a href="/" className="flex items-center gap-4">
-            <img
-              src={logoSrc}
-              alt="Ripley Media Agentic"
-              className="h-12 w-auto sm:h-14"
-            />
-            {/* If your PNG already includes the words, keep this hidden.
-                If you want text next to the logo, change hidden -> block */}
-            <span className="hidden text-base font-semibold tracking-tight sm:text-lg">
-              Ripley Media Agentic
-            </span>
-          </a>
+      {/* Masthead: big centered logo + centered nav */}
+      <header className="border-b border-zinc-200 bg-white">
+        <div className="mx-auto max-w-6xl px-6">
+          {/* Big centered logo block */}
+          <div className="flex justify-center py-6 sm:py-8">
+            <a href="/" className="block">
+              <img
+                src={logoSrc}
+                alt="Ripley Media Agentic"
+                className="
+                  mx-auto h-auto
+                  w-[70%]
+                  max-w-[520px]
+                  sm:w-[60%]
+                  sm:max-w-[640px]
+                  md:w-[55%]
+                  md:max-w-[720px]
+                "
+              />
+            </a>
+          </div>
 
-          <nav className="flex items-center gap-4">
+          {/* Centered nav */}
+          <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pb-5">
             <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
               Writing
             </a>
