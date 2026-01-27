@@ -29,37 +29,53 @@ export default function Home() {
         <div className="border-b border-zinc-200 bg-white/90 backdrop-blur shadow-sm">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6">
             <a href="/" className="flex items-center gap-3">
-              <img src={logoSrc} alt="Ripley Media Agentic" className="h-7 w-auto" />
+              <img
+                src={logoSrc}
+                alt="Ripley Media Agentic"
+                className="h-7 w-auto"
+              />
               <span className="hidden sm:block text-sm font-semibold tracking-tight text-zinc-900">
                 Ripley Media Agentic
               </span>
             </a>
 
             <nav className="flex items-center gap-4">
-              <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
+              <a
+                href="/writing"
+                className="text-sm text-zinc-700 hover:text-zinc-900"
+              >
                 Writing
               </a>
-              <a href="/thesis" className="text-sm text-zinc-700 hover:text-zinc-900">
+              <a
+                href="/thesis"
+                className="text-sm text-zinc-700 hover:text-zinc-900"
+              >
                 Thesis
               </a>
-              <a href="#services" className="text-sm text-zinc-700 hover:text-zinc-900">
+              <a
+                href="#services"
+                className="text-sm text-zinc-700 hover:text-zinc-900"
+              >
                 Services
               </a>
-              <a href="#deliverables" className="text-sm text-zinc-700 hover:text-zinc-900">
+              <a
+                href="#deliverables"
+                className="text-sm text-zinc-700 hover:text-zinc-900"
+              >
                 Deliverables
               </a>
               <a
                 href="#contact"
                 className="rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-800"
               >
-                30-day readiness call
+                Call
               </a>
             </nav>
           </div>
         </div>
       </div>
 
-      {/* BIG MASTHEAD */}
+      {/* BIG MASTHEAD (NOT sticky) */}
       <header className="border-b border-zinc-200 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
           {/* Big centered logo */}
@@ -75,16 +91,28 @@ export default function Home() {
 
           {/* Centered nav */}
           <nav className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
+            <a
+              href="/writing"
+              className="text-sm text-zinc-700 hover:text-zinc-900"
+            >
               Writing
             </a>
-            <a href="/thesis" className="text-sm text-zinc-700 hover:text-zinc-900">
+            <a
+              href="/thesis"
+              className="text-sm text-zinc-700 hover:text-zinc-900"
+            >
               Thesis
             </a>
-            <a href="#services" className="text-sm text-zinc-700 hover:text-zinc-900">
+            <a
+              href="#services"
+              className="text-sm text-zinc-700 hover:text-zinc-900"
+            >
               Services
             </a>
-            <a href="#deliverables" className="text-sm text-zinc-700 hover:text-zinc-900">
+            <a
+              href="#deliverables"
+              className="text-sm text-zinc-700 hover:text-zinc-900"
+            >
               Deliverables
             </a>
             <a
@@ -109,28 +137,37 @@ export default function Home() {
           </h1>
 
           <p className="mt-5 text-lg leading-relaxed text-zinc-700">
-            Packaging + workflow cleanup that reduces activation tax and unlocks incremental demand
-            without consuming your product roadmap.
+            Packaging + workflow cleanup that reduces activation tax and unlocks
+            incremental demand without consuming your product roadmap.
           </p>
 
           <p className="mt-3 text-sm text-zinc-600">
-            Built for platform and inventory leaders: Ads/Product, Revenue, Partnerships, and Programmatic Operations.
+            Built for platform and inventory leaders: Ads/Product, Revenue,
+            Partnerships, and Programmatic Operations.
           </p>
 
-          {/* Proof strip */}
-          <div className="mt-8 rounded-2xl border border-zinc-200 bg-white p-5">
-            <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
-              Credibility in one line
-            </p>
+          <div className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 text-left">
+            <p className="text-sm font-semibold">Credibility in one line</p>
             <p className="mt-2 text-sm text-zinc-700">
-              Operator-led GTM + partnerships across CTV/programmatic (seller + platform + partner) — built around
-              packaging readiness, workflow friction removal, and pilots tied to revenue outcomes.
+              Operator-led GTM + partnerships across CTV/programmatic (seller +
+              platform + partner) — built around packaging readiness, workflow
+              friction removal, and pilots tied to revenue outcomes.
             </p>
-            <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-zinc-600">
-              <span className="rounded-full border border-zinc-200 px-3 py-1">Packaging &amp; offers</span>
-              <span className="rounded-full border border-zinc-200 px-3 py-1">Deal &amp; activation workflow</span>
-              <span className="rounded-full border border-zinc-200 px-3 py-1">Measurement mapping</span>
-              <span className="rounded-full border border-zinc-200 px-3 py-1">Partner-ready operating terms</span>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {[
+                "Packaging & offers",
+                "Deal & activation workflow",
+                "Measurement mapping",
+                "Partner-ready operating terms",
+              ].map((pill) => (
+                <span
+                  key={pill}
+                  className="inline-flex rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700"
+                >
+                  {pill}
+                </span>
+              ))}
             </div>
           </div>
 
@@ -163,14 +200,16 @@ export default function Home() {
             <div className="rounded-xl border border-zinc-200 p-5">
               <p className="text-sm font-semibold">Clarity</p>
               <p className="mt-2 text-sm text-zinc-700">
-                Identify where agents create real leverage, plus the smallest measurable pilot.
+                Identify where agents create real leverage, plus the smallest
+                measurable pilot.
               </p>
             </div>
 
             <div className="rounded-xl border border-zinc-200 p-5">
               <p className="text-sm font-semibold">Acceleration</p>
               <p className="mt-2 text-sm text-zinc-700">
-                Clean offers + metadata so partners and agents can discover and transact reliably.
+                Clean offers + metadata so partners and agents can discover and
+                transact reliably.
               </p>
             </div>
 
@@ -184,7 +223,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Thesis (on-page scan) */}
+      {/* Thesis */}
       <section id="thesis" className="bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-2xl font-semibold tracking-tight">
@@ -192,15 +231,18 @@ export default function Home() {
           </h2>
 
           <p className="mt-4 max-w-4xl text-zinc-700">
-            Agentic buying will route spend toward inventory that's clean, machine-readable, and easy to transact.
-            The winners reduce manual steps in packaging, activation, and measurement — without massive rewrites.
+            Agentic buying will route spend toward inventory that's clean,
+            machine-readable, and easy to transact. The winners reduce manual
+            steps in packaging, activation, and measurement — without massive
+            rewrites.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             <div className="rounded-2xl border border-zinc-200 bg-white p-6">
               <p className="text-sm font-semibold">Inventory readiness</p>
               <p className="mt-3 text-sm text-zinc-700">
-                Make offers discoverable and executable with clear rules + consistent metadata.
+                Make offers discoverable and executable with clear rules +
+                consistent metadata.
               </p>
             </div>
 
@@ -223,9 +265,11 @@ export default function Home() {
             <p className="text-sm font-semibold">The promise</p>
             <p className="mt-3 text-sm text-zinc-700">
               <span className="font-semibold">
-                In 30 days, your inventory is agent-ready without consuming your product roadmap.
+                In 30 days, your inventory is agent-ready without consuming your
+                product roadmap.
               </span>{" "}
-              I show you what to clean up, what to standardize, and the smallest pilot that proves value.
+              I show you what to clean up, what to standardize, and the smallest
+              pilot that proves value.
             </p>
           </div>
 
@@ -255,27 +299,36 @@ export default function Home() {
           <h2 className="text-2xl font-semibold tracking-tight">How I help</h2>
 
           <p className="mt-3 max-w-3xl text-zinc-700">
-            A practical operator's approach: inventory + packaging readiness, partner workflows, and a pilot path that
-            drives revenue outcomes.
+            A practical operator's approach: inventory + packaging readiness,
+            partner workflows, and a pilot path that drives revenue outcomes.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             <div className="rounded-2xl border border-zinc-200 bg-white p-6">
-              <h3 className="text-sm font-semibold">30-Day Agentic Readiness Sprint</h3>
+              <h3 className="text-sm font-semibold">
+                30-Day Agentic Readiness Sprint
+              </h3>
               <p className="mt-3 text-sm text-zinc-700">
-                Make your inventory and offers clean, machine-readable, and executable — without hijacking the roadmap.
+                Make your inventory and offers clean, machine-readable, and
+                executable — without hijacking the roadmap.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-zinc-700">
                 <li>• Readiness scorecard + “activation tax” baseline</li>
                 <li>• Packaging spec + gold-standard examples</li>
-                <li>• Pilot plan + KPI definitions (time-to-launch, repeat spend, yield)</li>
+                <li>
+                  • Pilot plan + KPI definitions (time-to-launch, repeat spend,
+                  yield)
+                </li>
               </ul>
             </div>
 
             <div className="rounded-2xl border border-zinc-200 bg-white p-6">
-              <h3 className="text-sm font-semibold">Partnership + Packaging Design</h3>
+              <h3 className="text-sm font-semibold">
+                Partnership + Packaging Design
+              </h3>
               <p className="mt-3 text-sm text-zinc-700">
-                Partner-ready offers and operating terms that reduce friction and speed adoption.
+                Partner-ready offers and operating terms that reduce friction
+                and speed adoption.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-zinc-700">
                 <li>• DSP/SSP/OEM alignment</li>
@@ -305,7 +358,8 @@ export default function Home() {
           <h2 className="text-2xl font-semibold tracking-tight">What you get</h2>
 
           <p className="mt-3 max-w-3xl text-zinc-700">
-            Concrete outputs you can use internally, take to partners, and measure against revenue.
+            Concrete outputs you can use internally, take to partners, and
+            measure against revenue.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -327,7 +381,10 @@ export default function Home() {
                 body: "A 30–60 day pilot with success metrics (time-to-launch, repeat spend, yield, measurement clarity).",
               },
             ].map((item) => (
-              <div key={item.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <div
+                key={item.title}
+                className="rounded-2xl border border-zinc-200 bg-white p-6"
+              >
                 <h3 className="text-sm font-semibold">{item.title}</h3>
                 <p className="mt-3 text-sm text-zinc-700">{item.body}</p>
               </div>
@@ -351,11 +408,13 @@ export default function Home() {
       <section id="contact">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="rounded-2xl border border-zinc-200 p-8">
-            <h2 className="text-2xl font-semibold tracking-tight">Want to move faster?</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Want to move faster?
+            </h2>
 
             <p className="mt-3 max-w-3xl text-zinc-700">
-              If you want agentic workflows that translate into real revenue, let’s do a short call and decide if
-              there’s a fit.
+              If you want agentic workflows that translate into real revenue,
+              let’s do a short call and decide if there’s a fit.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -384,8 +443,13 @@ export default function Home() {
             </div>
 
             <p className="mt-4 text-xs text-zinc-500">
-              Executive brief:{" "}
-              <a href={executiveBriefHref} className="underline hover:text-zinc-800">
+              Prefer the direct link?{" "}
+              <a
+                href={executiveBriefHref}
+                className="underline hover:text-zinc-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {executiveBriefHref}
               </a>
             </p>
@@ -402,5 +466,3 @@ export default function Home() {
     </main>
   );
 }
-
-
