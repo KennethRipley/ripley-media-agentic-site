@@ -1,13 +1,77 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function Home() {
   const executiveBriefHref = "/RMA-Executive-Brief.pdf";
   const logoSrc = "/rma-agentic-white.png";
 
+  const [showStickyNav, setShowStickyNav] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      // Show the mini sticky nav after you scroll a bit past the masthead
+      setShowStickyNav(window.scrollY > 220);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      {/* Masthead (NOT sticky) */}
+      {/* MINI STICKY NAV (shows only after scrolling) */}
+      <div
+        className={[
+          "fixed left-0 top-0 z-50 w-full transition-all duration-200",
+          showStickyNav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none",
+        ].join(" ")}
+      >
+        <div className="border-b border-zinc-200 bg-white/90 backdrop-blur shadow-sm">
+          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6">
+            <a href="/" className="flex items-center gap-3">
+              <img
+                src={logoSrc}
+                alt="Ripley Media Agentic"
+                className="h-7 w-auto"
+              />
+              <span className="hidden sm:block text-sm font-semibold tracking-tight text-zinc-900">
+                Ripley Media Agentic
+              </span>
+            </a>
+
+            <nav className="flex items-center gap-4">
+              <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
+                Writing
+              </a>
+              <a href="/thesis" className="text-sm text-zinc-700 hover:text-zinc-900">
+                Thesis
+              </a>
+              <a href="#services" className="text-sm text-zinc-700 hover:text-zinc-900">
+                Services
+              </a>
+              <a href="#deliverables" className="text-sm text-zinc-700 hover:text-zinc-900">
+                Deliverables
+              </a>
+              <a
+                href="#contact"
+                className="rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+              >
+                Book
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      {/* Spacer so content doesn't get covered by sticky nav when it appears */}
+      <div className="h-0" aria-hidden="true" />
+
+      {/* BIG MASTHEAD (NOT sticky) */}
       <header className="border-b border-zinc-200 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
-          {/* Centered logo */}
+          {/* Big centered logo */}
           <div className="flex justify-center">
             <a href="/" className="block">
               <img
