@@ -103,7 +103,7 @@ export default function Home() {
             <div className="rounded-xl border border-zinc-200 p-5">
               <p className="text-sm font-semibold">Execution</p>
               <p className="mt-2 text-sm text-zinc-700">
-                A 30-day plan to become agentic-ready without eating the roadmap.
+                A focused 30-day sprint to become agent-ready without eating the roadmap.
               </p>
             </div>
           </div>
@@ -238,7 +238,7 @@ export default function Home() {
             {[
               {
                 title: "Agentic Readiness Scorecard",
-                body: "A clear view of what&apos;s clean, what&apos;s messy, and what to fix first tied to revenue impact."
+                body: "A clear view of what’s clean, what’s messy, and what to fix first — tied to revenue impact."
               },
               {
                 title: "Packaging Spec + Gold Standards",
@@ -250,7 +250,7 @@ export default function Home() {
               },
               {
                 title: "Pilot Plan + KPI Dashboard",
-                body: "A 30-60 day pilot with success metrics (time-to-launch, repeat spend, yield, measurement clarity)."
+                body: "A 30–60 day pilot with success metrics (time-to-launch, repeat spend, yield, measurement clarity)."
               }
             ].map((item) => (
               <div key={item.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
