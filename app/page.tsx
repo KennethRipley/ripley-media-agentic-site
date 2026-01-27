@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const executiveBriefHref = "/RMA-Executive-Brief.pdf";
-  const logoSrc = "/rma-agentic-white.png";
+  const executiveBriefHref = "/RMA-Executive-Brief.pdf"; // /public/RMA-Executive-Brief.pdf
+  const logoSrc = "/rma-agentic-white.png"; // /public/rma-agentic-white.png
 
   const [showStickyNav, setShowStickyNav] = useState(false);
 
@@ -68,14 +68,14 @@ export default function Home() {
                 href="#contact"
                 className="rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-800"
               >
-                30-day readiness call
+                Call
               </a>
             </nav>
           </div>
         </div>
       </div>
 
-      {/* BIG MASTHEAD (NOT sticky) */}
+      {/* BIG LOGO MASTHEAD (not sticky) */}
       <header className="border-b border-zinc-200 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
           {/* Big centered logo */}
@@ -84,12 +84,12 @@ export default function Home() {
               <img
                 src={logoSrc}
                 alt="Ripley Media Agentic"
-                className="mx-auto h-auto w-[70%] max-w-[520px] sm:w-[60%] sm:max-w-[640px] md:w-[55%] md:max-w-[720px]"
+                className="mx-auto h-auto w-[78%] max-w-[560px] sm:w-[68%] sm:max-w-[700px] md:w-[62%] md:max-w-[820px]"
               />
             </a>
           </div>
 
-          {/* Centered nav */}
+          {/* Centered top nav */}
           <nav className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <a
               href="/writing"
@@ -125,7 +125,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero (CENTERED) */}
+      {/* HERO (centered under logo) */}
       <section className="mx-auto max-w-6xl px-6 py-14">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mx-auto mb-3 inline-flex rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-700">
@@ -171,6 +171,7 @@ export default function Home() {
             </a>
           </div>
 
+          {/* Credibility box */}
           <div className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 text-left">
             <p className="text-sm font-semibold">Credibility in one line</p>
             <p className="mt-2 text-sm text-zinc-700">
@@ -187,6 +188,7 @@ export default function Home() {
             </ul>
           </div>
 
+          {/* 3 pillars */}
           <div className="mt-10 grid gap-4 text-left sm:grid-cols-3">
             <div className="rounded-xl border border-zinc-200 p-5">
               <p className="text-sm font-semibold">Clarity</p>
@@ -214,15 +216,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Thesis */}
-      <section id="thesis" className="bg-zinc-50">
+      {/* THESIS TEASER SECTION */}
+      <section className="bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-2xl font-semibold tracking-tight">
-            The CTV problem isn&apos;t AI. It&apos;s workflow friction.
+            The CTV problem isn't AI. It's workflow friction.
           </h2>
 
           <p className="mt-4 max-w-4xl text-zinc-700">
-            Agentic buying will route spend toward inventory that&apos;s clean,
+            Agentic buying will route spend toward inventory that's clean,
             machine-readable, and easy to transact. The winners reduce manual
             steps in packaging, activation, and measurement — without massive
             rewrites.
@@ -284,7 +286,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* SERVICES */}
       <section id="services">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-2xl font-semibold tracking-tight">How I help</h2>
@@ -343,7 +345,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Deliverables */}
+      {/* DELIVERABLES */}
       <section id="deliverables" className="bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-2xl font-semibold tracking-tight">What you get</h2>
@@ -395,7 +397,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact */}
+      {/* CONTACT */}
       <section id="contact">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="rounded-2xl border border-zinc-200 p-8">
@@ -405,7 +407,7 @@ export default function Home() {
 
             <p className="mt-3 max-w-3xl text-zinc-700">
               If you want agentic workflows that translate into real revenue,
-              let&apos;s do a short call and decide if there&apos;s a fit.
+              let’s do a short call and decide if there’s a fit.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -422,9 +424,17 @@ export default function Home() {
               >
                 Connect on LinkedIn
               </a>
+
+              <a
+                href={executiveBriefHref}
+                className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Executive brief (PDF)
+              </a>
             </div>
 
-            {/* IMPORTANT: This is the footer fix that renders correctly */}
             <p className="mt-4 text-xs text-zinc-500">
               Executive brief:{" "}
               <a
@@ -440,7 +450,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* FOOTER */}
       <footer className="border-t border-zinc-200">
         <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-zinc-600">
           © {new Date().getFullYear()} Ripley Media Agentic. All rights reserved.
