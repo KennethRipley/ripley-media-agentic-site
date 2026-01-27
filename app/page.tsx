@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      {/* MINI STICKY NAV (shows only after scrolling) */}
+      {/* MINI STICKY NAV (appears after scrolling) */}
       <div
         className={[
           "fixed left-0 top-0 z-50 w-full transition-all duration-200",
@@ -75,10 +75,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* BIG MASTHEAD (NOT sticky) */}
+      {/* BIG MASTHEAD (centered logo + nav; NOT sticky) */}
       <header className="border-b border-zinc-200 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
-          {/* Big centered logo */}
           <div className="flex justify-center">
             <a href="/" className="block">
               <img
@@ -89,29 +88,28 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Centered nav */}
           <nav className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <a
               href="/writing"
-              className="text-sm text-zinc-700 hover:text-zinc-900"
+              className="text-sm font-medium text-zinc-700 hover:text-zinc-900"
             >
               Writing
             </a>
             <a
               href="/thesis"
-              className="text-sm text-zinc-700 hover:text-zinc-900"
+              className="text-sm font-medium text-zinc-700 hover:text-zinc-900"
             >
               Thesis
             </a>
             <a
               href="#services"
-              className="text-sm text-zinc-700 hover:text-zinc-900"
+              className="text-sm font-medium text-zinc-700 hover:text-zinc-900"
             >
               Services
             </a>
             <a
               href="#deliverables"
-              className="text-sm text-zinc-700 hover:text-zinc-900"
+              className="text-sm font-medium text-zinc-700 hover:text-zinc-900"
             >
               Deliverables
             </a>
@@ -125,7 +123,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero (CENTERED) */}
+      {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mx-auto mb-3 inline-flex rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-700">
@@ -171,7 +169,6 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Credibility / proof box */}
           <div className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 text-left">
             <p className="text-sm font-semibold">Credibility in one line</p>
             <p className="mt-2 text-sm text-zinc-700">
@@ -180,7 +177,7 @@ export default function Home() {
               friction removal, and pilots tied to revenue outcomes.
             </p>
 
-            <ul className="mt-4 grid gap-2 text-sm text-zinc-700 sm:grid-cols-2">
+            <ul className="mt-4 space-y-1 text-sm text-zinc-700">
               <li>• Packaging &amp; offers</li>
               <li>• Deal &amp; activation workflow</li>
               <li>• Measurement mapping</li>
@@ -188,7 +185,6 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* 3-up pillars */}
           <div className="mt-10 grid gap-4 text-left sm:grid-cols-3">
             <div className="rounded-xl border border-zinc-200 p-5">
               <p className="text-sm font-semibold">Clarity</p>
@@ -217,14 +213,14 @@ export default function Home() {
       </section>
 
       {/* Thesis preview */}
-      <section id="thesis" className="bg-zinc-50">
+      <section className="bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-2xl font-semibold tracking-tight">
-            The CTV problem isn't AI. It's workflow friction.
+            The CTV problem isn&apos;t AI. It&apos;s workflow friction.
           </h2>
 
           <p className="mt-4 max-w-4xl text-zinc-700">
-            Agentic buying will route spend toward inventory that's clean,
+            Agentic buying will route spend toward inventory that&apos;s clean,
             machine-readable, and easy to transact. The winners reduce manual
             steps in packaging, activation, and measurement — without massive
             rewrites.
@@ -292,7 +288,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold tracking-tight">How I help</h2>
 
           <p className="mt-3 max-w-3xl text-zinc-700">
-            A practical operator's approach: inventory + packaging readiness,
+            A practical operator&apos;s approach: inventory + packaging readiness,
             partner workflows, and a pilot path that drives revenue outcomes.
           </p>
 
@@ -320,8 +316,8 @@ export default function Home() {
                 Partnership + Packaging Design
               </h3>
               <p className="mt-3 text-sm text-zinc-700">
-                Partner-ready offers and operating terms that reduce friction
-                and speed adoption.
+                Partner-ready offers and operating terms that reduce friction and
+                speed adoption.
               </p>
               <ul className="mt-4 space-y-2 text-sm text-zinc-700">
                 <li>• DSP/SSP/OEM alignment</li>
@@ -434,18 +430,6 @@ export default function Home() {
                 Executive brief (PDF)
               </a>
             </div>
-
-            <p className="mt-4 text-xs text-zinc-500">
-              Executive brief:{" "}
-              <a
-                href={executiveBriefHref}
-                className="underline hover:text-zinc-800"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {executiveBriefHref}
-              </a>
-            </p>
           </div>
         </div>
       </section>
