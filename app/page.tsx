@@ -59,6 +59,12 @@ export default function Home() {
             >
               See deliverables
             </a>
+            <a
+              href="/writing"
+              className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+            >
+              Read my writing
+            </a>
           </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
