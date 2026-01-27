@@ -1,21 +1,74 @@
-// app/page.tsx
+"use client";
+
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const executiveBriefHref = "/RMA-Executive-Brief.pdf";
   const logoSrc = "/rma-agentic-white.png";
 
+  const [showStickyNav, setShowStickyNav] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowStickyNav(window.scrollY > 220);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      {/* Masthead (big logo + simple nav) */}
+      {/* MINI STICKY NAV (shows only after scrolling) */}
+      <div
+        className={[
+          "fixed left-0 top-0 z-50 w-full transition-all duration-200",
+          showStickyNav
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-2 pointer-events-none",
+        ].join(" ")}
+      >
+        <div className="border-b border-zinc-200 bg-white/90 backdrop-blur shadow-sm">
+          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6">
+            <a href="/" className="flex items-center gap-3">
+              <img src={logoSrc} alt="Ripley Media Agentic" className="h-7 w-auto" />
+              <span className="hidden sm:block text-sm font-semibold tracking-tight text-zinc-900">
+                Ripley Media Agentic
+              </span>
+            </a>
+
+            <nav className="flex items-center gap-4">
+              <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
+                Writing
+              </a>
+              <a href="/thesis" className="text-sm text-zinc-700 hover:text-zinc-900">
+                Thesis
+              </a>
+              <a href="#services" className="text-sm text-zinc-700 hover:text-zinc-900">
+                Services
+              </a>
+              <a href="#deliverables" className="text-sm text-zinc-700 hover:text-zinc-900">
+                Deliverables
+              </a>
+              <a
+                href="#contact"
+                className="rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+              >
+                30-day readiness call
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      {/* BIG MASTHEAD (NOT sticky) */}
       <header className="border-b border-zinc-200 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
-          {/* Big centered logo (NOT sticky) */}
+          {/* Big centered logo */}
           <div className="flex justify-center">
-            <a href="/" className="block" aria-label="Ripley Media Agentic home">
+            <a href="/" className="block">
               <img
                 src={logoSrc}
                 alt="Ripley Media Agentic"
-                className="mx-auto h-auto w-[72%] max-w-[560px] sm:w-[62%] sm:max-w-[680px] md:w-[58%] md:max-w-[760px]"
+                className="mx-auto h-auto w-[70%] max-w-[520px] sm:w-[60%] sm:max-w-[640px] md:w-[55%] md:max-w-[720px]"
               />
             </a>
           </div>
@@ -44,7 +97,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero */}
+      {/* Hero (CENTERED) */}
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mx-auto mb-3 inline-flex rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-700">
@@ -95,10 +148,9 @@ export default function Home() {
               Operator-led GTM + partnerships across CTV/programmatic (seller + platform + partner) — built around
               packaging readiness, workflow friction removal, and pilots tied to revenue outcomes.
             </p>
-
-            <ul className="mt-4 grid gap-2 text-sm text-zinc-700 sm:grid-cols-2">
-              <li>• Packaging &amp; offers</li>
-              <li>• Deal &amp; activation workflow</li>
+            <ul className="mt-4 space-y-1 text-sm text-zinc-700">
+              <li>• Packaging & offers</li>
+              <li>• Deal & activation workflow</li>
               <li>• Measurement mapping</li>
               <li>• Partner-ready operating terms</li>
             </ul>
@@ -129,15 +181,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Thesis teaser */}
-      <section className="bg-zinc-50">
+      {/* Thesis */}
+      <section id="thesis" className="bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="text-2xl font-semibold tracking-tight">
-            The CTV problem isn&apos;t AI. It&apos;s workflow friction.
+            The CTV problem isn't AI. It's workflow friction.
           </h2>
 
           <p className="mt-4 max-w-4xl text-zinc-700">
-            Agentic buying will route spend toward inventory that&apos;s clean, machine-readable, and easy to transact.
+            Agentic buying will route spend toward inventory that's clean, machine-readable, and easy to transact.
             The winners reduce manual steps in packaging, activation, and measurement — without massive rewrites.
           </p>
 
@@ -200,7 +252,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold tracking-tight">How I help</h2>
 
           <p className="mt-3 max-w-3xl text-zinc-700">
-            A practical operator&apos;s approach: inventory + packaging readiness, partner workflows, and a pilot path that
+            A practical operator's approach: inventory + packaging readiness, partner workflows, and a pilot path that
             drives revenue outcomes.
           </p>
 
@@ -298,7 +350,10 @@ export default function Home() {
           <div className="rounded-2xl border border-zinc-200 p-8">
             <h2 className="text-2xl font-semibold tracking-tight">Want to move faster?</h2>
 
-            
+            <p className="mt-3 max-w-3xl text-zinc-700">
+              If you want agentic workflows that translate into real revenue, let’s do a short call and decide if there’s
+              a fit.
+            </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -314,25 +369,15 @@ export default function Home() {
               >
                 Connect on LinkedIn
               </a>
-
-              <a
-                href={executiveBriefHref}
-                className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Executive brief (PDF)
-              </a>
             </div>
 
-            {/* This fixes the “Executive brief: Executive brief (PDF)” duplication */}
             <p className="mt-4 text-xs text-zinc-500">
               Executive brief:{" "}
               <a
                 href={executiveBriefHref}
+                className="underline hover:text-zinc-800"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:text-zinc-800"
               >
                 {executiveBriefHref}
               </a>
@@ -349,4 +394,4 @@ export default function Home() {
       </footer>
     </main>
   );
-}</header><section className="mx-auto max-w-6xl px-6 py-16"><section className="mx-auto max-w-6xl px-6 py-20">
+}
