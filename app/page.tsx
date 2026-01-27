@@ -1,5 +1,6 @@
 export default function Home() {
   const executiveBriefHref = "/RMA-Executive-Brief.pdf"; // Put the PDF in /public with this exact filename
+  const logoSrc = "/rma-agentic-white.png"; // Put this PNG in /public
 
   return (
     <main className="min-h-screen bg-white text-zinc-900">
@@ -8,11 +9,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           {/* Logo + Name */}
           <a href="/" className="flex items-center gap-3">
-            <img
-              src="/rma-logo.svg"
-              alt="Ripley Media Agentic"
-              className="h-7 w-auto"
-            />
+            <img src={logoSrc} alt="Ripley Media Agentic" className="h-8 w-auto" />
             <span className="font-semibold tracking-tight">Ripley Media Agentic</span>
           </a>
 
