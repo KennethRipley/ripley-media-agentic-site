@@ -9,11 +9,7 @@ export default function Home() {
   const [showStickyNav, setShowStickyNav] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      // Show the mini sticky nav after you scroll a bit past the masthead
-      setShowStickyNav(window.scrollY > 220);
-    };
-
+    const onScroll = () => setShowStickyNav(window.scrollY > 220);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -25,17 +21,15 @@ export default function Home() {
       <div
         className={[
           "fixed left-0 top-0 z-50 w-full transition-all duration-200",
-          showStickyNav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none",
+          showStickyNav
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-2 pointer-events-none",
         ].join(" ")}
       >
         <div className="border-b border-zinc-200 bg-white/90 backdrop-blur shadow-sm">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6">
             <a href="/" className="flex items-center gap-3">
-              <img
-                src={logoSrc}
-                alt="Ripley Media Agentic"
-                className="h-7 w-auto"
-              />
+              <img src={logoSrc} alt="Ripley Media Agentic" className="h-7 w-auto" />
               <span className="hidden sm:block text-sm font-semibold tracking-tight text-zinc-900">
                 Ripley Media Agentic
               </span>
@@ -64,9 +58,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Spacer so content doesn't get covered by sticky nav when it appears */}
-      <div className="h-0" aria-hidden="true" />
 
       {/* BIG MASTHEAD (NOT sticky) */}
       <header className="border-b border-zinc-200 bg-white">
@@ -106,10 +97,10 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero */}
+      {/* Hero (CENTERED) */}
       <section className="mx-auto max-w-6xl px-6 py-16">
-        <div className="max-w-3xl">
-          <p className="mb-3 inline-flex rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-700">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mx-auto mb-3 inline-flex rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-700">
             Agentic AI • Programmatic CTV • Partnerships
           </p>
 
@@ -126,7 +117,7 @@ export default function Home() {
             Built for platform and inventory leaders: Ads/Product, Revenue, Partnerships, and Programmatic Operations.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
               href="#contact"
               className="rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
@@ -151,7 +142,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+          <div className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 text-left">
             <p className="text-sm font-semibold">Proof, not theory</p>
             <p className="mt-2 text-sm text-zinc-700">
               Operator-led GTM + partnerships across CTV/programmatic (seller + platform + partner). Focus:
@@ -160,7 +151,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <div className="mt-10 grid gap-4 text-left sm:grid-cols-3">
             <div className="rounded-xl border border-zinc-200 p-5">
               <p className="text-sm font-semibold">Clarity</p>
               <p className="mt-2 text-sm text-zinc-700">
