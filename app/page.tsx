@@ -1,59 +1,25 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 export default function Home() {
   const executiveBriefHref = "/RMA-Executive-Brief.pdf";
   const logoSrc = "/rma-agentic-white.png";
 
-  const [compact, setCompact] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setCompact(window.scrollY > 80);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      {/* Sticky Masthead: BIG at top, truly COLLAPSES on scroll */}
-      <header
-        className={[
-          "sticky top-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur",
-          "transition-all duration-300",
-          compact ? "shadow-sm" : "shadow-none",
-        ].join(" ")}
-      >
-        <div className="mx-auto max-w-6xl px-6">
-          {/* Logo row */}
-          <div
-            className={[
-              "flex justify-center transition-all duration-300 overflow-hidden",
-              compact ? "py-2" : "py-6 sm:py-8",
-            ].join(" ")}
-          >
+      {/* Masthead (NOT sticky) */}
+      <header className="border-b border-zinc-200 bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-10">
+          {/* Centered logo */}
+          <div className="flex justify-center">
             <a href="/" className="block">
               <img
                 src={logoSrc}
                 alt="Ripley Media Agentic"
-                className="mx-auto h-auto transition-all duration-300"
-                style={{
-                  // Big masthead size
-                  width: compact ? 140 : undefined,
-                  // When not compact, use responsive width
-                }}
+                className="mx-auto h-auto w-[70%] max-w-[520px] sm:w-[60%] sm:max-w-[640px] md:w-[55%] md:max-w-[720px]"
               />
             </a>
           </div>
 
-          {/* Nav row (collapses spacing on scroll) */}
-          <nav
-            className={[
-              "flex flex-wrap items-center justify-center transition-all duration-300",
-              compact ? "gap-x-4 gap-y-2 pb-2" : "gap-x-6 gap-y-2 pb-5",
-            ].join(" ")}
-          >
+          {/* Centered nav */}
+          <nav className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <a href="/writing" className="text-sm text-zinc-700 hover:text-zinc-900">
               Writing
             </a>
@@ -124,7 +90,9 @@ export default function Home() {
           <div className="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
             <p className="text-sm font-semibold">Proof, not theory</p>
             <p className="mt-2 text-sm text-zinc-700">
-              Operator-led GTM + partnerships across CTV/programmatic (seller + platform + partner). Focus: inventory + packaging readiness and workflow friction removal — so teams become ready for agentic buying without consuming the product roadmap.
+              Operator-led GTM + partnerships across CTV/programmatic (seller + platform + partner). Focus:
+              inventory + packaging readiness and workflow friction removal — so teams become ready for agentic
+              buying without consuming the product roadmap.
             </p>
           </div>
 
@@ -153,8 +121,205 @@ export default function Home() {
         </div>
       </section>
 
-      {/* (rest of your page stays the same as before — thesis/services/deliverables/contact/footer) */}
-      {/* If you want, I’ll paste the full rest again — but this fix is isolated to the header area. */}
+      {/* Thesis */}
+      <section id="thesis" className="bg-zinc-50">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <h2 className="text-2xl font-semibold tracking-tight">
+            The CTV problem isn't AI. It's workflow friction.
+          </h2>
+
+          <p className="mt-4 max-w-4xl text-zinc-700">
+            Agentic buying will route spend toward inventory that's clean, machine-readable, and easy to transact.
+            The winners reduce manual steps in packaging, activation, and measurement without massive rewrites.
+          </p>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <p className="text-sm font-semibold">Inventory readiness</p>
+              <p className="mt-3 text-sm text-zinc-700">
+                Make offers discoverable and executable with clear rules + consistent metadata.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <p className="text-sm font-semibold">Friction reduction</p>
+              <p className="mt-3 text-sm text-zinc-700">
+                Reduce tickets, handoffs, and rework to shorten time-to-spend.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <p className="text-sm font-semibold">Measurable outcomes</p>
+              <p className="mt-3 text-sm text-zinc-700">
+                Build a pilot tied to repeat spend, yield, and measurement clarity.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-2xl border border-zinc-200 bg-white p-6">
+            <p className="text-sm font-semibold">The promise</p>
+            <p className="mt-3 text-sm text-zinc-700">
+              <span className="font-semibold">
+                In 30 days, your inventory is agent-ready without consuming your product roadmap.
+              </span>{" "}
+              I show you what to clean up, what to standardize, and the smallest pilot that proves value.
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="/thesis"
+              className="inline-flex rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+            >
+              Read the full thesis →
+            </a>
+
+            <a
+              href={executiveBriefHref}
+              className="inline-flex rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download executive brief (PDF)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <h2 className="text-2xl font-semibold tracking-tight">How I help</h2>
+
+          <p className="mt-3 max-w-3xl text-zinc-700">
+            A practical operator's approach: inventory + packaging readiness, partner workflows, and a pilot path that
+            drives revenue outcomes.
+          </p>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <h3 className="text-sm font-semibold">30-Day Agentic Readiness Sprint</h3>
+              <p className="mt-3 text-sm text-zinc-700">
+                Make your inventory and offers clean, machine-readable, and executable without hijacking the roadmap.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-zinc-700">
+                <li>• Offer + metadata cleanup plan</li>
+                <li>• Packaging spec + gold standard examples</li>
+                <li>• Pilot recommendation with success metrics</li>
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <h3 className="text-sm font-semibold">Partnership + Packaging Design</h3>
+              <p className="mt-3 text-sm text-zinc-700">
+                Partner-ready offers and operating terms that reduce friction and speed adoption.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-zinc-700">
+                <li>• DSP/SSP/OEM alignment</li>
+                <li>• Two-way value exchange</li>
+                <li>• Commercial + workflow fit</li>
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <h3 className="text-sm font-semibold">GTM + Enablement</h3>
+              <p className="mt-3 text-sm text-zinc-700">
+                Narrative, sales tools, and weekly execution that moves dollars.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-zinc-700">
+                <li>• Positioning + talk tracks</li>
+                <li>• One-pagers + exec decks</li>
+                <li>• Sales playbooks + weekly cadence</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Deliverables */}
+      <section id="deliverables" className="bg-zinc-50">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <h2 className="text-2xl font-semibold tracking-tight">What you get</h2>
+
+          <p className="mt-3 max-w-3xl text-zinc-700">
+            Concrete outputs you can use internally, take to partners, and measure against revenue.
+          </p>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                title: "Agentic Readiness Scorecard",
+                body: "A clear view of what's clean, what's messy, and what to fix first — tied to revenue impact.",
+              },
+              {
+                title: "Packaging Spec + Gold Standards",
+                body: "A simple packaging framework and examples that make offers machine-readable and executable.",
+              },
+              {
+                title: "Workflow Map + Friction Kill List",
+                body: "Where activation breaks today, how much it costs, and the fastest path to reduce it.",
+              },
+              {
+                title: "Pilot Plan + KPI Dashboard",
+                body: "A 30–60 day pilot with success metrics (time-to-launch, repeat spend, yield, measurement clarity).",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-zinc-200 bg-white p-6">
+                <h3 className="text-sm font-semibold">{item.title}</h3>
+                <p className="mt-3 text-sm text-zinc-700">{item.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <a
+              href={executiveBriefHref}
+              className="inline-flex rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download executive brief (PDF)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="rounded-2xl border border-zinc-200 p-8">
+            <h2 className="text-2xl font-semibold tracking-tight">Want to move faster?</h2>
+
+            <p className="mt-3 max-w-3xl text-zinc-700">
+              If you want agentic workflows that translate into real revenue, let's do a short call and decide if there's
+              a fit.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="mailto:kenneth@ripley.media"
+                className="rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
+              >
+                Email me
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/kennethripley/"
+                className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+              >
+                Connect on LinkedIn
+              </a>
+            </div>
+
+            <p className="mt-4 text-xs text-zinc-500">
+              Executive brief:{" "}
+              <a href={executiveBriefHref} className="underline hover:text-zinc-800">
+                {executiveBriefHref}
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="border-t border-zinc-200">
