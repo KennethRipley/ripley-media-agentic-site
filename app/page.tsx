@@ -352,4 +352,4 @@ export default function Home() {
       </footer>
     </main>
   );
-}
+}</header><section className="mx-auto max-w-6xl px-6 py-16"><section className="mx-auto max-w-6xl px-6 py-20">
