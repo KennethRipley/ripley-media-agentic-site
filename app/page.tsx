@@ -68,7 +68,7 @@ export default function Home() {
                 href="#contact"
                 className="rounded-md bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-800"
               >
-                Call
+                30-day readiness call
               </a>
             </nav>
           </div>
@@ -146,31 +146,6 @@ export default function Home() {
             Partnerships, and Programmatic Operations.
           </p>
 
-          <div className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 text-left">
-            <p className="text-sm font-semibold">Credibility in one line</p>
-            <p className="mt-2 text-sm text-zinc-700">
-              Operator-led GTM + partnerships across CTV/programmatic (seller +
-              platform + partner) — built around packaging readiness, workflow
-              friction removal, and pilots tied to revenue outcomes.
-            </p>
-
-            <div className="mt-4 flex flex-wrap gap-2">
-              {[
-                "Packaging & offers",
-                "Deal & activation workflow",
-                "Measurement mapping",
-                "Partner-ready operating terms",
-              ].map((pill) => (
-                <span
-                  key={pill}
-                  className="inline-flex rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700"
-                >
-                  {pill}
-                </span>
-              ))}
-            </div>
-          </div>
-
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
               href="#contact"
@@ -196,6 +171,28 @@ export default function Home() {
             </a>
           </div>
 
+          {/* Credibility block + what you'll cover */}
+          <div className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 text-left">
+            <p className="text-sm font-semibold">Credibility in one line</p>
+            <p className="mt-2 text-sm text-zinc-700">
+              Operator-led GTM + partnerships across CTV/programmatic (seller +
+              platform + partner) — built around packaging readiness, workflow
+              friction removal, and pilots tied to revenue outcomes.
+            </p>
+
+            <div className="mt-4 grid gap-2 sm:grid-cols-2">
+              <div className="text-sm text-zinc-700">• Packaging &amp; offers</div>
+              <div className="text-sm text-zinc-700">
+                • Deal &amp; activation workflow
+              </div>
+              <div className="text-sm text-zinc-700">• Measurement mapping</div>
+              <div className="text-sm text-zinc-700">
+                • Partner-ready operating terms
+              </div>
+            </div>
+          </div>
+
+          {/* 3 pillars */}
           <div className="mt-10 grid gap-4 text-left sm:grid-cols-3">
             <div className="rounded-xl border border-zinc-200 p-5">
               <p className="text-sm font-semibold">Clarity</p>
@@ -404,7 +401,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact */}
+      {/* Contact (cleaned — no duplicate PDF link here) */}
       <section id="contact">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="rounded-2xl border border-zinc-200 p-8">
@@ -428,29 +425,22 @@ export default function Home() {
               <a
                 href="https://www.linkedin.com/in/kennethripley/"
                 className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
-              >
-                Connect on LinkedIn
-              </a>
-
-              <a
-                href={executiveBriefHref}
-                className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Executive brief (PDF)
+                Connect on LinkedIn
               </a>
             </div>
 
             <p className="mt-4 text-xs text-zinc-500">
-              Prefer the direct link?{" "}
+              Executive brief:{" "}
               <a
                 href={executiveBriefHref}
                 className="underline hover:text-zinc-800"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {executiveBriefHref}
+                Executive brief (PDF)
               </a>
             </p>
           </div>
