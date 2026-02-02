@@ -4,7 +4,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-      {/* MASTHEAD */}
+      {/* MASTHEAD (big centered logo carries the page) */}
       <header className="bg-zinc-900 text-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
           {/* Big centered logo */}
@@ -13,7 +13,7 @@ export default function Home() {
               <img
                 src={logoSrc}
                 alt="Ripley Media Agentic"
-                className="mx-auto h-auto w-[80%] max-w-[560px] sm:w-[70%] sm:max-w-[640px] md:w-[60%] md:max-w-[720px]"
+                className="mx-auto h-auto w-[92%] max-w-[860px] sm:w-[88%] sm:max-w-[980px] md:w-[82%] md:max-w-[1100px]"
               />
             </a>
           </div>
@@ -45,101 +45,112 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="mx-auto mb-3 inline-flex rounded-full border border-zinc-200 px-3 py-1 text-xs text-zinc-700">
-            Agentic AI • Programmatic CTV • Partnerships
-          </p>
-
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Turn agentic concepts into measurable CTV growth.
-          </h1>
-
-          <p className="mt-5 text-lg leading-relaxed text-zinc-700">
-            A measured path to agentic success—starting with the first rung of agentic-ready inventory,
-            governance, and execution—so you’re positioned to capture the growth to come.
-          </p>
-
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a
-              href="#contact"
-              className="rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
-            >
-              Book a call
-            </a>
-
-            <a
-              href={executiveBriefHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
-            >
-              Download executive brief (PDF)
-            </a>
-          </div>
-
-          {/* Credibility / quick bullets */}
-          <div className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 text-left">
-            <p className="text-sm font-semibold">Credibility in one line</p>
-            <p className="mt-2 text-sm text-zinc-700">
-              Operator-led GTM + partnerships across CTV/programmatic (seller + platform + partner) — built around
-              packaging readiness, workflow friction removal, and pilots tied to revenue outcomes.
-            </p>
-
-            <ul className="mt-4 grid gap-2 text-sm text-zinc-700 sm:grid-cols-2">
-              <li>• Packaging &amp; offers</li>
-              <li>• Deal &amp; activation workflow</li>
-              <li>• Measurement mapping</li>
-              <li>• Partner-ready operating terms</li>
-            </ul>
-
-            <div className="mt-5 flex flex-wrap gap-3">
-              <a
-                href="#contact"
-                className="inline-flex rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
-              >
-                Book a call
-              </a>
-              <a
-                href="/thesis"
-                className="inline-flex rounded-md border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
-              >
-                Read the thesis
-              </a>
-              <a
-                href={executiveBriefHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-md border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
-              >
-                Download executive brief (PDF)
-              </a>
-            </div>
-          </div>
-
-          {/* 3-up value props */}
-          <div className="mt-10 grid gap-4 text-left sm:grid-cols-3">
-            <div className="rounded-xl border border-zinc-200 p-5">
-              <p className="text-sm font-semibold">Clarity</p>
-              <p className="mt-2 text-sm text-zinc-700">
-                Identify where agents create real leverage, plus the smallest measurable pilot.
+      {/* HERO (premium, two-column, less stiff) */}
+      <section className="relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-50 to-white" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl px-6 py-16 sm:py-20">
+          <div className="grid items-start gap-10 lg:grid-cols-12">
+            <div className="lg:col-span-7">
+              <p className="inline-flex rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs text-zinc-700 shadow-sm">
+                Agentic AI • Programmatic CTV • Partnerships
               </p>
+
+              <h1 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
+                Turn agentic concepts into measurable CTV growth.
+              </h1>
+
+              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-zinc-700">
+                A measured path to agentic success—starting with the first rung of agentic-ready inventory, governance,
+                and execution—so you’re positioned to capture the growth to come.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="#contact"
+                  className="rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-zinc-800"
+                >
+                  Book a call
+                </a>
+
+                <a
+                  href={executiveBriefHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+                >
+                  Download executive brief (PDF)
+                </a>
+              </div>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-xl border border-zinc-200 bg-white p-5">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Clarity</p>
+                  <p className="mt-2 text-sm text-zinc-700">
+                    Identify where agents create real leverage, plus the smallest measurable pilot.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-zinc-200 bg-white p-5">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Acceleration</p>
+                  <p className="mt-2 text-sm text-zinc-700">
+                    Clean offers + metadata so partners and agents can discover and transact reliably.
+                  </p>
+                </div>
+
+                <div className="rounded-xl border border-zinc-200 bg-white p-5">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Execution</p>
+                  <p className="mt-2 text-sm text-zinc-700">A 30-day readiness sprint that doesn’t hijack the roadmap.</p>
+                </div>
+              </div>
             </div>
 
-            <div className="rounded-xl border border-zinc-200 p-5">
-              <p className="text-sm font-semibold">Acceleration</p>
-              <p className="mt-2 text-sm text-zinc-700">
-                Clean offers + metadata so partners and agents can discover and transact reliably.
-              </p>
-            </div>
+            <aside className="lg:col-span-5">
+              <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+                <p className="text-sm font-semibold">What you get (fast)</p>
+                <p className="mt-2 text-sm text-zinc-700">
+                  Operator-led GTM + partnerships across CTV/programmatic — built around packaging readiness, workflow
+                  friction removal, and pilots tied to revenue outcomes.
+                </p>
 
-            <div className="rounded-xl border border-zinc-200 p-5">
-              <p className="text-sm font-semibold">Execution</p>
-              <p className="mt-2 text-sm text-zinc-700">
-                A 30-day readiness sprint that doesn’t hijack the roadmap.
-              </p>
-            </div>
+                <ul className="mt-4 space-y-2 text-sm text-zinc-700">
+                  <li className="flex gap-2">
+                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-zinc-900" />
+                    Readiness scorecard + “activation tax” baseline
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-zinc-900" />
+                    Packaging spec + gold-standard examples
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-zinc-900" />
+                    Pilot plan + KPI definitions (time-to-launch, repeat spend, yield)
+                  </li>
+                </ul>
+
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a
+                    href="/thesis"
+                    className="inline-flex rounded-md border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+                  >
+                    Read the thesis
+                  </a>
+                  <a
+                    href="#services"
+                    className="inline-flex rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+                  >
+                    See services
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-900 p-6 text-white shadow-sm">
+                <p className="text-xs font-semibold uppercase tracking-wide text-white/70">Credibility</p>
+                <p className="mt-2 text-sm text-white/90">
+                  25+ years in advanced TV + programmatic. Former exec operator roles across CTV, ad sales, and
+                  partnerships.
+                </p>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
