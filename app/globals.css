@@ -21,7 +21,7 @@
 
 /* GLOBAL READABILITY DEFAULTS (premium + modern) */
 html {
-  /* Two steps above 18px */
+  /* Larger default type (easy to read without leaning in) */
   font-size: 20px;
 }
 
@@ -29,7 +29,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,11 +37,34 @@ body {
 
 /* Make long-form text easier to scan */
 p {
-  max-width: 70ch;
+  max-width: 72ch;
 }
 
 /* Reduce the “tiny button” feeling */
 a,
 button {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* Premium subtle motion + focus */
+a,
+button {
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(24, 24, 27, 0.55);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* Smooth scrolling for in-page nav */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Light “premium” selection */
+::selection {
+  background: rgba(24, 24, 27, 0.12);
 }
