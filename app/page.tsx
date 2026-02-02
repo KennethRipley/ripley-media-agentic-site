@@ -18,6 +18,30 @@ export default function Home() {
             </a>
           </div>
 
+          {/* Proof strip (premium, reduces stiffness) */}
+          <div className="mx-auto mt-7 max-w-4xl">
+            <div className="flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-center sm:flex-row sm:justify-center sm:text-left">
+              <p className="text-sm text-white/80">
+                <span className="font-semibold text-white">Operator-led</span> CTV + programmatic GTM, partnerships, and
+                packaging.
+              </p>
+              <div className="hidden h-5 w-px bg-white/15 sm:block" />
+              <p className="text-sm text-white/80">
+                Focus: <span className="font-semibold text-white">agent-ready inventory</span>, workflow friction
+                removal, measurable pilots.
+              </p>
+            </div>
+
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/60">
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">CTV</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Programmatic</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Partnerships</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Packaging</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Activation</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Measurement</span>
+            </div>
+          </div>
+
           {/* Centered nav */}
           <nav className="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-sm">
             <a href="/writing" className="text-white/80 hover:text-white">
