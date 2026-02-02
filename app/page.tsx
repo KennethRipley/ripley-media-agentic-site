@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO (premium, two-column, less stiff) */}
+      {/* HERO */}
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-50 to-white" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-6 py-16 sm:py-20">
@@ -88,6 +88,7 @@ export default function Home() {
                 and execution—so you’re positioned to capture the growth to come.
               </p>
 
+              {/* Executive brief CTA (hero) */}
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="#contact"
@@ -151,13 +152,8 @@ export default function Home() {
                   </li>
                 </ul>
 
+                {/* Removed "Read the thesis" button per request */}
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <a
-                    href="/thesis"
-                    className="inline-flex rounded-md border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
-                  >
-                    Read the thesis
-                  </a>
                   <a
                     href="#services"
                     className="inline-flex rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
@@ -224,21 +220,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8">
             <a
               href="/thesis"
               className="inline-flex rounded-md border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
             >
               Read the full thesis →
-            </a>
-
-            <a
-              href={executiveBriefHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
-            >
-              Download executive brief (PDF)
             </a>
           </div>
         </div>
@@ -326,17 +313,6 @@ export default function Home() {
                 <p className="mt-3 text-sm text-zinc-700">{item.body}</p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-10">
-            <a
-              href={executiveBriefHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
-            >
-              Download executive brief (PDF)
-            </a>
           </div>
         </div>
       </section>
