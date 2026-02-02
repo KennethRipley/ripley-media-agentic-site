@@ -183,16 +183,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-2xl border border-zinc-200 bg-white p-6">
-            <p className="text-sm font-semibold">The promise</p>
-            <p className="mt-3 text-sm text-zinc-700">
-              <span className="font-semibold">
-                In 30 days, your inventory is agent-ready without consuming your product roadmap.
-              </span>{" "}
-              I show you what to clean up, what to standardize, and the smallest pilot that proves value.
-            </p>
-          </div>
-
           <div className="mt-8">
             <a
               href="/thesis"
