@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO (story-forward, no right-column boxes) */}
+      {/* HERO (story-forward) */}
       <section className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-50 to-white" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-6 py-16 sm:py-20">
@@ -106,25 +106,41 @@ export default function Home() {
               </a>
             </div>
 
+            {/* 1-2-3 Story Cards */}
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               <div className="rounded-xl border border-zinc-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Clarity</p>
-                <p className="mt-2 text-sm text-zinc-700">
-                  Identify where agents create real leverage, plus the smallest measurable pilot.
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-zinc-900 text-xs font-semibold text-white">
+                    1
+                  </span>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Find the leverage</p>
+                </div>
+                <p className="mt-3 text-sm text-zinc-700">
+                  Identify the highest-impact agentic use case and the smallest pilot that proves value.
                 </p>
               </div>
 
               <div className="rounded-xl border border-zinc-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Acceleration</p>
-                <p className="mt-2 text-sm text-zinc-700">
-                  Clean offers + metadata so partners and agents can discover and transact reliably.
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-zinc-900 text-xs font-semibold text-white">
+                    2
+                  </span>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Make it transact</p>
+                </div>
+                <p className="mt-3 text-sm text-zinc-700">
+                  Clean offers + metadata so partners (and agents) can discover, buy, and measure without friction.
                 </p>
               </div>
 
               <div className="rounded-xl border border-zinc-200 bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Execution</p>
-                <p className="mt-2 text-sm text-zinc-700">
-                  A 30-day readiness sprint that doesn’t hijack the roadmap.
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-zinc-900 text-xs font-semibold text-white">
+                    3
+                  </span>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Prove it fast</p>
+                </div>
+                <p className="mt-3 text-sm text-zinc-700">
+                  Execute a 30-day sprint that delivers a readiness scorecard, a pilot plan, and measurable outcomes.
                 </p>
               </div>
             </div>
