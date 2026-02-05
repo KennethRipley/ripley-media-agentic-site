@@ -17,25 +17,18 @@ export default function WritingPage() {
     tags: ["Agentic", "AdCP", "CTV", "Programmatic"],
   };
 
-  // Add more posts here (Option A: link-out cards).
   const recent: Post[] = [
     {
-      title: "Add your next post title here",
-      dek: "1–2 sentence description (what a reader gets).",
-      href: "https://ripleymedia.substack.com",
-      tags: ["Agentic", "CTV"],
+      title: "AdCP vs IAB Tech Lab: I’ve Seen This Movie Before",
+      dek: "A practical take on what AdCP signals, what the Tech Lab might do next, and why execution beats hype.",
+      href: "https://open.substack.com/pub/ripleymedia/p/adcp-vs-iab-tech-lab-ive-seen-this?utm_campaign=post-expanded-share&utm_medium=web",
+      tags: ["Agentic", "AdCP", "CTV", "Programmatic"],
     },
     {
-      title: "Add another post title here",
-      dek: "Short description goes here.",
-      href: "https://ripleymedia.substack.com",
-      tags: ["Programmatic"],
-    },
-    {
-      title: "Add a third post title here",
-      dek: "Short description goes here.",
-      href: "https://ripleymedia.substack.com",
-      tags: ["Ad Ops"],
+      title: "AdCP vs the Stack: Are We Innovating… or Protecting the Pipes?",
+      dek: "A clear-eyed look at the incentives behind the ‘agentic’ moment—and how the ecosystem may try to protect its existing pipes.",
+      href: "https://open.substack.com/pub/ripleymedia/p/adcp-vs-the-stack-are-we-innovating?utm_campaign=post-expanded-share&utm_medium=web",
+      tags: ["Agentic", "AdCP", "Ecosystem", "Workflow"],
     },
   ];
 
