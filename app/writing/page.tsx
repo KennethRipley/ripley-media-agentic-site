@@ -12,7 +12,7 @@ export default function WritingPage() {
     {
       title: "The Agentic Shift Is Simple Economics",
       dek: "A simpler way to think about the agentic shift: less standards drama, more economics. Lower transaction costs, less manual work, and more money kept by buyers and sellers.",
-      href: "https://ripleymedia.substack.com/p/the-agentic-shift-is-simple-economics",
+      href: "https://open.substack.com/pub/ripleymedia/p/the-agentic-shift-is-simple-economics?utm_campaign=post-expanded-share&utm_medium=web",
       source: "Substack",
       tags: ["Agentic", "Economics", "CTV", "Programmatic"],
     },
@@ -42,7 +42,6 @@ export default function WritingPage() {
         Selected posts — quick reads that connect agentic concepts to real execution.
       </p>
 
-      {/* Featured */}
       {featured && (
         <div className="mt-10">
           <a
@@ -82,7 +81,6 @@ export default function WritingPage() {
         </div>
       )}
 
-      {/* Recent */}
       {recent.length > 0 && (
         <section className="mt-14">
           <div className="flex flex-wrap items-end justify-between gap-3">
@@ -144,4 +142,4 @@ export default function WritingPage() {
       )}
     </main>
   );
-}
+}do i run 
