@@ -10,6 +10,13 @@ export default function WritingPage() {
   // Maintain ONE list, ordered newest → oldest.
   const posts: Post[] = [
     {
+      title: "The Agentic Shift Is Simple Economics",
+      dek: "A simpler way to think about the agentic shift: less standards drama, more economics. Lower transaction costs, less manual work, and more money kept by buyers and sellers.",
+      href: "https://ripleymedia.substack.com/p/the-agentic-shift-is-simple-economics",
+      source: "Substack",
+      tags: ["Agentic", "Economics", "CTV", "Programmatic"],
+    },
+    {
       title: "AdCP vs IAB Tech Lab: I’ve Seen This Movie Before",
       dek: "A practical take on what AdCP signals, what the Tech Lab might do next, and why execution beats hype.",
       href: "https://open.substack.com/pub/ripleymedia/p/adcp-vs-iab-tech-lab-ive-seen-this?utm_campaign=post-expanded-share&utm_medium=web",
